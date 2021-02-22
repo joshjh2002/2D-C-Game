@@ -1,4 +1,3 @@
-
 /*
 Copyright (C) 2015-2018 Parallel Realities
 
@@ -20,6 +19,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
 #include "common.h"
+
 
 void initBlock(char *line)
 {
