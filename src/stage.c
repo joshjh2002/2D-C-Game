@@ -76,4 +76,5 @@ static void drawHud(void)
 	SDL_SetRenderDrawBlendMode(app.renderer, SDL_BLENDMODE_NONE);
 
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
+	drawText(SCREEN_WIDTH - 250, 5, 255, 255, 255, TEXT_RIGHT, "HEALTH %d/%d", player->health, player->maxHealth);
 }

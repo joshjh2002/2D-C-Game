@@ -54,6 +54,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define GLYPH_WIDTH  18
 #define GLYPH_HEIGHT 29
 
+//ENEMY
+#define ENEMY_SPEED 3
+
 enum
 {
 	TEXT_LEFT,

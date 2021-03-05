@@ -57,6 +57,9 @@ void playSound(int id, int channel);
 void prepareScene(void);
 void presentScene(void);
 
+//enemy
+void initEnemy(char* line);
+
 #ifdef __cplusplus
 }
 #endif

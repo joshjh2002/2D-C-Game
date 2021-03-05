@@ -29,7 +29,8 @@ void initPlayer(void)
 	stage.entityTail->next = player;
 	stage.entityTail = player;
 
-	player->health = 1;
+	player->health = 5;
+	player->maxHealth = 5;
 
 	pete[0] = loadTexture("gfx/pete01.png");
 	pete[1] = loadTexture("gfx/pete02.png");
