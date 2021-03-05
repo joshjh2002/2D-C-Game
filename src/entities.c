@@ -34,11 +34,11 @@ void initEntities(void)
 
 void doEntities(void)
 {
-	Entity *e, *prev;
+	Entity* e, * prev;
 
 	prev = &stage.entityHead;
 
-	for (e = stage.entityHead.next ; e != NULL ; e = e->next)
+	for (e = stage.entityHead.next; e != NULL; e = e->next)
 	{
 		self = e;
 
@@ -56,15 +56,22 @@ void doEntities(void)
 				stage.entityTail = prev;
 			}
 
+			//closes the game when the player dies
+			if (e == player)
+			{
+				exit(1);
+			}
+
 			prev->next = e->next;
 			free(e);
 			e = prev;
+
 		}
 
 		prev = e;
 	}
 
-	for (e = stage.entityHead.next ; e != NULL ; e = e->next)
+	for (e = stage.entityHead.next; e != NULL; e = e->next)
 	{
 		if (e->riding != NULL)
 		{
