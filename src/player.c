@@ -19,7 +19,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
 #include "common.h"
-
 static SDL_Texture *pete[2];
 
 void initPlayer(void)
@@ -72,5 +71,15 @@ void doPlayer(void)
 		player->x = player->y = 0;
 
 		app.keyboard[SDL_SCANCODE_SPACE] = 0;
+	}
+
+	if (app.keyboard[SDL_SCANCODE_P])
+	{
+		if (player->potionCount > 0 && player->health < player->maxHealth)
+		{
+			player->health++;
+			player->potionCount--;
+		}
+		app.keyboard[SDL_SCANCODE_P] = 0;
 	}
 }

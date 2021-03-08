@@ -25,16 +25,18 @@ void initPotion(char* line)
 
 static void tick(void)
 {
+	//this will make the potion bob up and down
+	//I have subtracted 1 so that the bobbing is slightly out of sync to the pizzas sin(x) bobbing
 	self->value += 0.1;
 	self->y += sin(self->value - 1);
 }
 
 static void touch(Entity* other)
 {
-	//when the player isn't at max health, only then will the potion be collected and used
-	if (self->health > 0 && other == player && player->health < player->maxHealth)
+	//if the potionCount is not 2, only then will the potion be collected
+	if (self->health > 0 && other == player && player->potionCount < 2)
 	{
 		self->health = 0;
-		player->health++;
+		player->potionCount++;
 	}
 }

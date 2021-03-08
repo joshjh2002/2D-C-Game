@@ -53,6 +53,7 @@ struct Entity {
 	float dy;
 	int health;
 	int maxHealth;
+	int potionCount;
 	int isOnGround;
 	float value;
 	SDL_Texture *texture;
