@@ -51,9 +51,6 @@ struct Entity {
 	float sy;
 	float dx;
 	float dy;
-	int health;
-	int maxHealth;
-	int potionCount;
 	int isOnGround;
 	float value;
 	SDL_Texture *texture;
@@ -62,6 +59,11 @@ struct Entity {
 	long flags;
 	Entity *riding;
 	Entity *next;
+
+	//my custom properties
+	int health;
+	int maxHealth;
+	int potionCount;
 };
 
 typedef struct {

@@ -76,6 +76,8 @@ static void drawHud(void)
 	SDL_SetRenderDrawBlendMode(app.renderer, SDL_BLENDMODE_NONE);
 
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
+
+	//these are responsible for adding the text to the game to show the players health and potion count
 	drawText(SCREEN_WIDTH - 250, 5, 255, 255, 255, TEXT_RIGHT, "HEALTH %d/%d", player->health, player->maxHealth);
 	drawText(SCREEN_WIDTH - 500, 5, 255, 255, 255, TEXT_RIGHT, "POTIONS %d/2", player->potionCount);
 }

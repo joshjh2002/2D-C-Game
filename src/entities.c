@@ -299,11 +299,11 @@ static void addEntFromLine(char *line)
 	{
 		initPizza(line);
 	}
-	else if (strcmp(name, "ENEMY") == 0)
+	else if (strcmp(name, "ENEMY") == 0) //if the .dat file contains the keyword ENEMY this will execute
 	{
 		initEnemy(line);
 	}
-	else if (strcmp(name, "POTION") == 0)
+	else if (strcmp(name, "POTION") == 0)  //if the .dat file contains the keyword POTION this will execute
 	{
 		initPotion(line);
 	}

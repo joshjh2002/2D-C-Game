@@ -73,6 +73,7 @@ void doPlayer(void)
 		app.keyboard[SDL_SCANCODE_SPACE] = 0;
 	}
 
+	//this adds the functionality to the button P to use a potion
 	if (app.keyboard[SDL_SCANCODE_P])
 	{
 		if (player->potionCount > 0 && player->health < player->maxHealth)
