@@ -32,7 +32,7 @@ static void tick(void)
 static void touch(Entity* other)
 {
 	//when the player isn't at max health, only then will the potion be collected and used
-	if (self->health > 0 && other == player && player->health > player->maxHealth)
+	if (self->health > 0 && other == player && player->health < player->maxHealth)
 	{
 		self->health = 0;
 		player->health++;
