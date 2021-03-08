@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="enemy.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="potion.c" />
     <ClCompile Include="src\block.c" />
     <ClCompile Include="src\camera.c" />
     <ClCompile Include="src\draw.c" />
@@ -46,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SpringProject.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\ents01.dat" />
+    <None Include="data\map01.dat" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

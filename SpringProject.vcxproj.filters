@@ -69,6 +69,9 @@
     <ClCompile Include="enemy.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="potion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\structs.h">
@@ -88,5 +91,9 @@
     <ResourceCompile Include="SpringProject.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\ents01.dat" />
+    <None Include="data\map01.dat" />
   </ItemGroup>
 </Project>

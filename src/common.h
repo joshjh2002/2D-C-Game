@@ -60,6 +60,9 @@ void presentScene(void);
 //enemy
 void initEnemy(char* line);
 
+//potion
+void initPotion(char* line);
+
 #ifdef __cplusplus
 }
 #endif
