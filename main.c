@@ -22,7 +22,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 static void capFrameRate(long* then, float* remainder);
 
-char* global_dir = "C:\\Users\\di918039\\source\\repos\\cs1pr-portfolio\\project-visual-studio\\SpringProject";
+char* global_dir = "C:/Users/joshh/OneDrive - University of Reading/Year 1/Programming/cs1pr";
 
 int WinMain(){
 	long then;
