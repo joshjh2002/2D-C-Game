@@ -307,6 +307,10 @@ static void addEntFromLine(char *line)
 	{
 		initPotion(line);
 	}
+	else if (strcmp(name, "EMITTER") == 0)
+	{
+		initEmitter(line);
+	}
 	else
 	{
 		SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_WARN, "Unknown entity '%s'", line);

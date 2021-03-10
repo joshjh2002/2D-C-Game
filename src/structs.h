@@ -64,6 +64,7 @@ struct Entity {
 	int health;
 	int maxHealth;
 	int potionCount;
+	Entity* spawner;
 };
 
 typedef struct {

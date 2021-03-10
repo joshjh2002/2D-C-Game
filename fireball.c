@@ -2,10 +2,10 @@
 
 static void tick(void);
 static void touch(Entity* other);
-static Entity* spawner;
 
-void initFireball(float sx, float ex, float sy, float ey, Entity* spawner1)
+void initFireball(float sx, float ex, float sy, float ey, Entity* spawner)
 {
+	printf("FIREBALL SPAWNED\n");
 	Entity* e;
 
 	e = malloc(sizeof(Entity));
@@ -24,12 +24,14 @@ void initFireball(float sx, float ex, float sy, float ey, Entity* spawner1)
 	e->y = e->sy;
 
 	e->tick = tick;
+	e->touch = touch;
 
 	e->texture = loadTexture("gfx/fireball.png");
 	SDL_QueryTexture(e->texture, NULL, NULL, &e->w, &e->h);
 	e->flags = EF_WEIGHTLESS;
 
-	spawner = spawner1;
+	e->spawner = spawner;
+
 }
 
 static void tick(void)
@@ -49,6 +51,15 @@ static void tick(void)
 		self->dx *= FIREBALL_SPEED;
 		self->dy *= FIREBALL_SPEED;
 	}
+
+	//the fireball will keep going
+	self->ex *= 1.1;
+	self->ey *= 1.1;
+
+	if (self->health > 0 && self->isOnGround)
+	{
+		self->health = 0;
+	}
 }
 
 static void touch(Entity* other)
@@ -59,7 +70,7 @@ static void touch(Entity* other)
 		self->health = 0;
 		player->health--;
 	}
-	else if (self->health > 0 && (other != player && self != spawner))
+	else if (self->health > 0 && other != self->spawner) //when touching other entities that is not it's spawner
 	{
 		self->health = 0;
 	}
