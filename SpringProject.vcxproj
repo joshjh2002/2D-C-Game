@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enemy.c" />
+    <ClCompile Include="fireball.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="potion.c" />
     <ClCompile Include="src\block.c" />

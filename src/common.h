@@ -64,6 +64,9 @@ void initEnemy(char* line);
 //potion
 void initPotion(char* line);
 
+//fireball
+void initFireball(float sx, float ex, float sy, float ey);
+
 #ifdef __cplusplus
 }
 #endif

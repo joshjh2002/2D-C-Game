@@ -72,6 +72,9 @@
     <ClCompile Include="potion.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="fireball.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\structs.h">

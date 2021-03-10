@@ -57,6 +57,9 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 //ENEMY
 #define ENEMY_SPEED 3
 
+//FIREBALL
+#define FIREBALL_SPEED 8
+
 enum
 {
 	TEXT_LEFT,
