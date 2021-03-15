@@ -1,6 +1,6 @@
 #include "common.h"
-void tick(void);
-void touch(Entity* other);
+static void tick(void);
+static void touch(Entity* other);
 
 //initialises enemy
 void initEnemy(char* line)
@@ -31,7 +31,7 @@ void initEnemy(char* line)
 
 //this will execute once very frame. The enemy speed is defined in common.h
 //it moves the enemy from its starting position to end position and back
-void tick(void)
+static void tick(void)
 {
 	if (abs(self->x - self->sx) < ENEMY_SPEED && abs(self->y - self->sy) < ENEMY_SPEED)
 	{
@@ -50,7 +50,7 @@ void tick(void)
 	}
 }
 
-void touch(Entity* other)
+static void touch(Entity* other)
 {
 	//when the player touches the enemy, this will execute
 	if (self->health > 0 && other == player)

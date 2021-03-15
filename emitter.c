@@ -25,6 +25,8 @@ void initEmitter(char* line)
 static void tick(void)
 {
 	float distance = sqrt(pow((player->x - self->x), 2) + pow((player->y - self->y), 2));
+	//if the player gets within 250 pixels of the enemy 
+	//and it hasn't spawned a fireball for a second, it will fire a fireball at the enemy
 	if (distance < 250 && self->value > 60)
 	{
 		initFireball(self->x, player->x, self->y, player->y, self);

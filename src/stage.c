@@ -86,5 +86,5 @@ static void drawHud(void)
 	drawText(SCREEN_WIDTH - 250, 5, red, green, 0, TEXT_RIGHT, "HEALTH %d/%d", player->health, player->maxHealth);
 
 	drawText(SCREEN_WIDTH - 500, 5, 255, 255, 255, TEXT_RIGHT, "POTIONS %d/2", player->potionCount);
-	//drawText(SCREEN_WIDTH - 700, 5, 255, 255, 255, TEXT_RIGHT, "%f, %f", player->x, player->y);
+	drawText(SCREEN_WIDTH - 700, 5, 255, 255, 255, TEXT_RIGHT, "%f, %f", player->x, player->y);
 }
